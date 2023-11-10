@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이미지 보이기 및 숨기기</title>
+  <style>
+    button{margin: 10px 2px;}
+  </style>
+</head>
+<body>
+
+   <button onclick="showhide()" id="btn">숨기기</button>
+   <div>
+   <img src="img/orange.PNG" alt="귤" id="pic">
+  </div>
+
+  <script>
+    //버튼토글,2가지기능
+    let sw = true;
+     function showhide(){
+      //처음호출하면 숨기기,두번째호출시 보이기
+      //상태를바꾸어놓아야함
+       let pic=document.getElementById("pic");
+       let btn=document.getElementById("btn");
+       if(sw==true){
+        pic.style.display="none";
+        //style.innertext
+        btn.innertext="보이기";
+        sw = false;
+       }else{
+        pic.style.display="block";
+        btn.innertext="숨기기";
+        sw = true;
+       }
+     }
+  </script>
+</body>
+</html>

@@ -14,12 +14,22 @@ console.log(num);
 //특정 요소 1개 조회
 console.log(num[0]);
 
+//수정
+num[1]=40;
+
 //전체요소 조회
 for(let i=0; i<num.length; i++){
    document.write(num[i]);
 }
 
-//연산
+document.write("<br>")
+//for in 문 사용
+for(let i in num){
+   document.write(num[i]+ " ");
+}
+
+
+//인덱스로연산
 console.log(num[1]-num[2]);
 console.log(num[1]<=num[2]);
 
@@ -27,14 +37,18 @@ let suma =0;
 let avg
 //합계,평균
 for(let i=0; i<num.length; i++){
-   suma = suma+  num[i];
+   suma = suma+num[i];
    //suma += num[i];
    
 }
 avg = (suma/num.length);
 
 console.log(suma);
-console.log(avg);
+console.log(avg.toFixed(2));
+
+
+
+
 
 
 

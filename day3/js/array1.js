@@ -32,7 +32,11 @@ let num = new Array(); //긴배열 생성
 console.log(animal);
 console.log
 
-
+document.write("<br>");
+//for in문
+for(let i in animal){
+      document.write(animal[i]+" ");
+}
 
 
 
