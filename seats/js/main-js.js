@@ -1,7 +1,7 @@
 //입장객 수에 따른 행과 열, 줄수 개선
 let customer,colNum,rowNum;
-customer=21;
-colNum=5;
+customer=prompt("입장객수 입력");
+colNum=prompt("좌석열수 입력");
 
 //나머지의 유무에따른 조건문
 if(customer%colNum == 0){
