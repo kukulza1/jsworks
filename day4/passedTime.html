@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title> 
+  <style>
+    .wrap{
+      width: 500px;
+      height: 500px;
+      border: 1px solid #ccc;
+      text-align: center;
+      border-radius: 300px;
+      background-color: antiquewhite;
+      margin: 0 auto;
+      position: relative;
+    }
+    h2{
+      position: absolute;
+      top:160px; left: 165px;
+    }
+     p{
+      position: absolute;
+      top:240px; left: 150px;
+    }
+    .accent{
+      font-size: 1.3em; color: brown; font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+   <h2>지금까지 몇일??</h2>
+   <p>개강 이후 <span id="day" class="accent"></span> 일 지났습니다.</p>
+   </div>
+   <script>
+    let today =new Date("2023-11-13"); //현재일
+    let firstDay = new Date("2023-09-05");
+
+    //현재일-시작일
+    let passedTime = today.getTime()-firstDay.getTime();
+    console.log(passedTime);
+
+    //일로환산
+    passedTime = Math.floor(passedTime/(24*60*60*1000));
+    console.log(passedTime);
+
+    document.getElementById("day").innerHTML = passedTime;
+   </script>
+</body>
+</html>

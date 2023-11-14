@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>배열객체의 함수</title>
+</head>
+<body>
+  <script>
+    let arr=[1,2,3];
+
+    //맨뒤추가-push(), 맨뒤삭제-pop()
+    arr.push(4);
+    console.log(arr)
+
+    arr.pop();
+    console.log(arr);
+
+    //맨앞추가-unshift(), 맨앞삭제-shift()
+    arr.unshift(0);
+    console.log(arr);
+    arr.shift();
+    console.log(arr);
+
+    //특정위치에서 추가,삭제-splice()
+    let arr2=['bear','chicken','pig','horse'];
+    console.log(arr2);
+
+    //삭제
+    arr2.splice(1,2);//1번인덱스기준에서 2번 삭제
+    console.log(arr2);
+
+    //추가
+    arr2.splice(1,0,'cow');//1번인덱스에서 0개 삭제하고 'cow'를 추가
+    console.log(arr2);
+  </script>
+</body>
+</html>

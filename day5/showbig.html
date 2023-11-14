@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>마우스로선택한 사진바꾸기</title>
+  <style>
+    #content{width: 600px;margin: 20px auto; border: 1px solid #ccc;}
+    #smallpic{margin: 20px 8px; }
+    .small{width:100px ; height:100px ; margin: 0 5px;}
+
+  </style>
+</head>
+<body>
+  <section id="content">
+    <h2>커피의세계</h2>
+    <div id="pic">
+      <img src="img/coffee-blue.jpg" alt="커피잔" id="cup">
+      <div id=smallpic>
+        <img src="img/coffee-blue.jpg" alt="커피잔" class="small">
+        <img src="img/coffee-gray.jpg" alt="커피잔" class="small">
+        <img src="img/coffee-pink.jpg" alt="커피잔" class="small">
+      </div>
+    </div>
+  </section>
+  
+   <script>
+    let bigpic=document.querySelector("#cup");
+     let smallpics =document.querySelectorAll(".small");
+     smallpics[1].onclick = showbig;//호출
+     function showbig(){
+      //this.src- 클릭한 대상 이미지 소스 경로
+        bigpic.setAttribute("src",this.src);
+     }
+     for(let i=0;i<smallpics.length;i++){
+      smallpics[i].onclick=showbig;
+     }
+   </script>
+</body>
+</html>

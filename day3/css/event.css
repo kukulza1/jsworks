@@ -1,0 +1,15 @@
+@charset "uft-8";
+#item{
+  width: 500px;
+  margin: 0 auto;
+  position: relative;
+}
+
+
+.btn_show{
+  position: absolute;
+  top: 570px; left: 20px;
+}
+.text{width: 400px; line-height: 1.5;
+  text-align: justify; display: none;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3배수찾기</title>
+  <style>
+    span{
+      color: red;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    let x=prompt("숫자를입력하세요");
+    x=parseInt(x);
+    if(x == null){
+      document.write("입력이취소되었습니다.")
+    }else if(isNaN(x)){
+      document.write("숫자를입력하세요")
+     } else{
+      x=parseInt(x);  
+    let c=0; //전역변수
+    for(let i=1;i<=x;i++){
+        if(i%3==0){
+          document.write(i+" ,")
+         c++;
+          
+        }
+    }
+    document.write("<span><br>"+x+"까지의 3배수의 개수:"+c+"개</span>");
+  }
+
+  </script>
+</body>
+</html>

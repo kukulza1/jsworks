@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>지역변수의 유효범위</title>
+</head>
+<body>
+  <h3>지역변수의 유효범위</h3>
+  <script>
+    //함수를 호출한후에 지역변수는 메모리에서 소멸함
+    //1을더하는 함수
+    let x
+    function oneup(){
+      let x=1; //지역변수
+      x=x+1;
+      return x;    
+    }
+    console.log("첫호출"+oneup());
+    console.log("두번째호출"+oneup());//첫호출후 소멸됨 그래서2
+    console.log("x="+x) //x가 소멸되었기때문에 오류발생
+  </script>
+
+</body>
+</html>

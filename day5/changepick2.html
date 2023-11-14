@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div>
+    <img src="img/cup-1.png" alt="찻잔" id="pic" onmouseover="changepic()" onmouseout="originpic()">
+  </div>
+  <script>
+    //이미지객체의 onclick속성사용
+    let img = document.querySelector("#pic");
+ 
+   function changepic(){
+    img.src="img/cup-2.png";
+   }
+      
+  function originpic(){
+    img.src="img/cup-1.png";
+   }
+  </script>
+</body>
+</html>
