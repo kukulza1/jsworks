@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mat.random()함수</title>
+</head>
+<body>
+  <script>
+    //console.log(Math.random());
+    let dice=Math.floor(Math.random()*6+1);
+    console.log(dice);
+
+    //주사위 10번 던지기
+    /*for(let i=1; i<11;i++){
+      dice=Math.floor(Math.random()*6)+1;
+      document.write(dice+"<br>")
+    }*/
+
+    //1부터10까지 무작위수 생성
+    let x= Math.floor(Math.random()*10+1);
+    document.write(x);
+
+    //배열에서 무작위추출
+    let season=['봄','여름','가을','겨울'];
+    
+    let y= Math.floor(Math.random()*season.length);
+    document.write("<br>"+season[y]);
+  </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>추첨프로그램</title>
+  <style>
+    section{width: 800px; margin: 0 auto; text-align: center;}
+    h1{
+      border: 1px solid #ccc; 
+      display: inline-block;    /*텍스트 크기에 맞춰서테두리가 그려짐*/
+      background-color:bisque;
+      padding: 10px 20px;
+    }
+    p{
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <section>
+    <h1>당첨자 발표</h1>
+  </section>
+  <script>
+    let member = 20;
+
+    //1명 추첨
+   let p1 = Math.floor(Math.random()*member+1);
+   document.write("<p>전체 응모자 수:"+ member+"명</br>")
+   document.write("<p>당첨자는")
+   document.write(p1+"번</p>");
+  </script>
+</body>
+</html>
